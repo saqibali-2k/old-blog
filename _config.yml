@@ -2,16 +2,16 @@
 title:          Blog
 description:    "Saqib's Blog"
 # baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+url:            "https://saqibali-2k.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Saqib Ali
+#   url:          https://chester.how
+  email:        saqibsali00@gmail.com
 
 # Build settings
 markdown:       kramdown
