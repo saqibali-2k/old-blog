@@ -26,15 +26,15 @@ A quick recap:
 
 Let's say we have four tests labeled A to D. Test A conflicts with tests B and C, while B conflicts with test D. Lets draw an edge between each of the conflicting tests:
 
-<img width="auto" src="/assets/imgs/graph-coloring/graph-coloring-2.png" alt="Test Conflicts"/>
+<img width="auto" src="/old-blog/assets/imgs/graph-coloring/graph-coloring-2.png" alt="Test Conflicts"/>
 
 So if we can assign a different VM to tests that have an edge between them .. aha! This is a graph coloring problem where assigning an color to a test, is the same as assigning a VM to that test. In that case, a valid graph coloring should give us a solution.
 
-<img width="auto" src="/assets/imgs/graph-coloring/graph-coloring-3.png" alt="A valid solution."/>
+<img width="auto" src="/old-blog/assets/imgs/graph-coloring/graph-coloring-3.png" alt="A valid solution."/>
 
 Finally, we ended up using only two VMs instead of the original four. 
 
-<img width="auto" src="/assets/imgs/graph-coloring/graph-coloring-4.png" alt="Final Result"/>
+<img width="auto" src="/old-blog/assets/imgs/graph-coloring/graph-coloring-4.png" alt="Final Result"/>
 
 # Coding it out
 

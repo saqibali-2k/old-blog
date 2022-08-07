@@ -23,7 +23,7 @@ I've come to realize that containerizing this application can:
 The changes above will allow for an overall faster training process, not to mention the development headaches containers save.
 
 ## Current Layout
-![Current Layout](/assets/imgs/containerizing-ml/Before.png "Current Layout")
+![Current Layout](/old-blog/assets/imgs/containerizing-ml/Before.png "Current Layout")
 
 Tha main process launches `self-play` processes. These agents are responsible for the `self-play` part of the training loop as they produce the training data. When sufficient data is gathered, the self-play agents *halt*, and the main process begins training the model using the generated data. This process is repeated until the developers are satisfied. 
 
@@ -35,7 +35,7 @@ Once this is achieved, we can containerize our two independent agents.
 
 Thus far, containers haven't been a requirement. We don't need containers to decouple our two agents, and we don't need containers to run them asyncronously. However, containers save the day in deployment. Many GPU-enabled machine learning workflows require developers to run their pipelines on remote instances using providers like GCP and AWS. Developers don't want to setup dependencies like [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) over and over everytime  compute instances are changed slightly. Besides, containers let us use tools like kubernetes. 
 
-![New Layout](/assets/imgs/containerizing-ml/After.png "New Layout")
+![New Layout](/old-blog/assets/imgs/containerizing-ml/After.png "New Layout")
 
 With a container orchestration system, we can tune the ratio of trainer agents to self-play agents. The training process is easily adjusted to our hardware.
 
